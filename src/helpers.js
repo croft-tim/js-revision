@@ -1,6 +1,8 @@
 // Helper functions go here
 // Keep each function small and focused
 
+import { use } from 'react'
+
 export function isValidLog(log) {
   //if (typeof log.user === 'string') return true
   //we really only want the false statement because all the others are true
@@ -18,13 +20,20 @@ export function isValidLog(log) {
     log.action !== 'logout'
   )
     return false
+  // here we want to return all the true ones as these have passed through
   return true
 }
 
 export function normaliseLog(log) {
-  // return a new, cleaned log object
+  // return a new, cleaned log object (i.e. make everything lowerCase)
+  return {
+    user: log.user.toLowerCase(),
+    action: log.action,
+    time: log.time,
+  }
 }
 
 export function groupByUser(logs) {
   // return an object keyed by username
+  return {}
 }
