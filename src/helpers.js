@@ -2,7 +2,8 @@
 // Keep each function small and focused
 
 export function isValidLog(log) {
-  // return true or false
+  //if (typeof log.user === 'string') return true
+  if (typeof log.user !== 'string') return false
 }
 
 export function normaliseLog(log) {
